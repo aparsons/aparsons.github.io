@@ -1,4 +1,4 @@
-# Build workflow for building a Next.js site
+# Workflow for building a Next.js site
 # To get started with Next.js see: https://nextjs.org/docs/getting-started
 
 name: Build Next.js Site

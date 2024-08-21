@@ -84,7 +84,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./resume-app/out
+          path: ./resume-app/dist
 
   # Deployment job
   deploy:

@@ -27,10 +27,10 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-# defaults:
-#   run:
-#     # Set the default working directory to `./resume-app` for all jobs
-#     working-directory: ./resume-app
+defaults:
+  run:
+    # Set the default working directory to `./resume-app` for all jobs
+    working-directory: ./resume-app
 
 jobs:
   # Build job
@@ -42,7 +42,7 @@ jobs:
       - name: Detect package manager
         id: detect-package-manager
         run: |
-          if [ -f "${{ github.workspace }}/yarn.lock" ]; then
+          if [ -f "yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
             echo "runner=yarn" >> $GITHUB_OUTPUT
@@ -64,13 +64,7 @@ jobs:
           cache-dependency-path: resume-app/package-lock.json
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        # with:
-        #   # Automatically inject basePath in your Next.js configuration file and disable
-        #   # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-        #   #
-        #   # You may remove this line if you want to manage the configuration yourself.
-        #   static_site_generator: next
-      - name: Restore cache
+      - name: Restore Cache
         uses: actions/cache@v4
         with:
           path: |

@@ -5,6 +5,9 @@
 name: Deploy Next.js site to Pages
 
 on:
+  # Runs on pull requests that are opened or re-opened
+  # pull_request:
+  #   types: [opened, reopened]
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
@@ -24,10 +27,10 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-defaults:
-  run:
-    # Set the default working directory to `./resume-app` for all jobs
-    working-directory: ./resume-app
+# defaults:
+#   run:
+#     # Set the default working directory to `./resume-app` for all jobs
+#     working-directory: ./resume-app
 
 jobs:
   # Build job

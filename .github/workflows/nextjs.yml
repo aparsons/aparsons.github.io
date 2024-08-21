@@ -24,6 +24,11 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+defaults:
+  run:
+    # Set the default working directory to `./resume-app` for all jobs
+    working-directory: ./resume-app
+
 jobs:
   # Build job
   build:

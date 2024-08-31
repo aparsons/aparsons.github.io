@@ -5,6 +5,8 @@
         "vscode": {
             "settings": {},
             "extensions": [
+                "bradlc.vscode-tailwindcss",
+                "csstools.postcss",
                 "editorconfig.editorconfig",
                 "github.vscode-github-actions",
                 "streetsidesoftware.code-spell-checker"

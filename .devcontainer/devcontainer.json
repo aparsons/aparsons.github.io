@@ -8,6 +8,8 @@
                 "bradlc.vscode-tailwindcss",
                 "csstools.postcss",
                 "editorconfig.editorconfig",
+                "github.copilot",
+                "github.copilot-chat",
                 "github.vscode-github-actions",
                 "streetsidesoftware.code-spell-checker"
             ]
